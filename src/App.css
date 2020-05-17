@@ -1,38 +1,283 @@
-.App {
-  text-align: center;
+body {
+    margin:0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/***************
+HEADER & FOOTER 
+****************/
+
+.header,
+.footer {
+    width: 100%;
+    background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header-container{
+    width: 90%;
+    margin: 0px auto;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header-logo {
+    width: 20%;
+    max-height: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+.header-title{
+    width: 60%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-carrito {
+    width: 5%;
+    max-height: 100px;
+}
+.footer {
+    border-top: 1px solid black;
+}
+.footer-container {
+    width: 90%;
+    margin: 0px auto;
+    padding: 20px 0;
+
+    text-align: center;
+    font-weight: bold;
+}
+
+.carrito{
+    color:black;
+    height: 100px;
+} 
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+  
+#content-wrap {
+    padding-bottom: 120px;    /* Footer height */
+}
+  
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* height: 120px;             Footer height */ 
+}
+
+
+/**********
+LOGIN FORM
+***********/
+
+.form-login {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.form-login-title  {
+    width: 100%;
+    text-align: start;
+}
+
+/**********
+REGISTRO FORM
+***********/
+
+.form-registro {
+    width: 90%;
+    margin: 20px auto;
+}
+
+/******
+CARRITO
+*******/
+
+.carrito-tabla{
+    text-align: center;
+}
+
+/******
+NAV BAR
+*******/
+.salir-btn{
+    background-color:white;
+    border: 1px solid black;
+    border-radius: 7pt;
+    -webkit-border-radius: 7pt;
+    -moz-border-radius: 7pt;
+    -ms-border-radius: 7pt;
+    -o-border-radius: 7pt;
+    
+    background-color: #FFFFFF;
+
+    text-align: center;
+    padding: 4px 10px;
+}
+
+/******
+  HOME
+*******/
+
+.home-title{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.home-subtitle{
+    text-align: center;
+}
+
+.categorias-btn-container{
+    width: 100%;
+}
+.categorias-btn-container{
+    text-align: center;
+}
+
+.categorias-btn{
+    margin: 10px;
+    background-color:white;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 7pt;
+    -webkit-border-radius: 7pt;
+    -moz-border-radius: 7pt;
+    -ms-border-radius: 7pt;
+    -o-border-radius: 7pt;
+    
+    background-color: #FFFFFF;
+
+    text-align: center;
+    padding: 4px 10px;
+}
+
+/*******
+PRODUCTO
+********/
+
+.producto-card{
+    border: solid;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.producto-img{
+    height: 200px;
+    width: 80%;
+    margin: 20px auto 0;
+}
+
+.producto-info{
+    text-align: center;
+}
+
+.card-btn{
+    background-color:white;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 7pt;
+    -webkit-border-radius: 7pt;
+    -moz-border-radius: 7pt;
+    -ms-border-radius: 7pt;
+    -o-border-radius: 7pt;
+    
+    text-align: center;
+    padding: 4px 10px;
+}
+.card-btn-link {
+    color: black;
+}
+
+/****************
+DETALLE PRODUCTO
+*****************/
+
+.detalle-prod-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+}
+@media (min-width: 576px) {
+    .detalle-prod-container{
+        flex-direction: row;
+    }
+    .detalle-prod-img{
+        width: 40%;
+    }
+    .detalle-prod-info{
+        width: 60%;
+        margin: 20px
+    }
+    .detalle-prod-btn-carrito{
+        margin-left: 20px;
+    }
+}
+
+.detalle-prod-input{
+    width: 50px;
+}
+.detalle-prod-btn{
+    background-color:white;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 7pt;
+    -webkit-border-radius: 7pt;
+    -moz-border-radius: 7pt;
+    -ms-border-radius: 7pt;
+    -o-border-radius: 7pt;
+    
+    text-align: center;
+    padding: 4px 10px;
+}
+
+/******
+CARRITO
+*******/
+.carrito-btn{
+    background-color:white;
+    border: 1px solid black;
+    border-radius: 7pt;
+    -webkit-border-radius: 7pt;
+    -moz-border-radius: 7pt;
+    -ms-border-radius: 7pt;
+    -o-border-radius: 7pt;
+    
+    text-align: center;
+    padding: 4px 10px;
+}
+
+/******
+COMPRA
+*******/
+.compra{
+    text-align: center;
+}
+
+/************
+PAYMENT FORM
+*************/
+
+.payment-form-input{
+    text-align: center;
+}
+
+.payment-form-btn{
+    background-color:white;
+    border: 1px solid black;
+    border-radius: 7pt;
+    -webkit-border-radius: 7pt;
+    -moz-border-radius: 7pt;
+    -ms-border-radius: 7pt;
+    -o-border-radius: 7pt;
+    
+    text-align: center;
+    padding: 4px 10px;
+
+    margin-bottom: 20px;
 }
