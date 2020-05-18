@@ -62,7 +62,7 @@ export default class PaymentForm extends React.Component {
                 className="payment-form-input"
             /><br/>
             <input
-                type="tel"
+                type="text"
                 name="name"
                 placeholder="Card Name"
                 onChange={this.handleInputChange}

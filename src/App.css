@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
+
 body {
     margin:0;
+    font-family: 'Balsamiq Sans', cursive;
 }
 
 /***************
@@ -29,10 +32,11 @@ HEADER & FOOTER
 
 .header-title{
     width: 60%;
+    text-align: center;
 }
 
 .header-carrito {
-    width: 5%;
+    width: 10%;
     max-height: 100px;
 }
 .footer {
@@ -98,6 +102,11 @@ CARRITO
 
 .carrito-tabla{
     text-align: center;
+}
+
+.carrito-table {
+    width: 90%;
+    margin: 20px auto;
 }
 
 /******
@@ -280,4 +289,13 @@ PAYMENT FORM
     padding: 4px 10px;
 
     margin-bottom: 20px;
+}
+
+
+/****************
+COMPRA FINALIZADA
+*****************/
+
+.compra-finalizada-mensaje{
+    text-align: center;
 }

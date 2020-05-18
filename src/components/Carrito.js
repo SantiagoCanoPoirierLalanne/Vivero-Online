@@ -4,13 +4,15 @@ import {useHistory} from "react-router-dom";
 
 import {Table} from 'react-bootstrap';
 
+import { BsFillTrashFill } from "react-icons/bs";
+
 function Carrito() {
 
     const history = useHistory();
     
     if (!sessionStorage.getItem('total')) {
         return (
-            <Table striped bordered hover size="sm">
+            <Table className="carrito-table" striped bordered hover size="sm">
             <thead class="carrito-tabla">
                 <tr>
                     <th>Producto</th>
@@ -57,7 +59,7 @@ function Carrito() {
                     <td>{p[1].precio} </td>
                     <td>{total} </td>
                     <td>
-                        <button className="carrito-btn" onClick={eliminarUno} value={p[0]} >eliminar</button>
+                        <button className="carrito-btn" onClick={eliminarUno} value={p[0]} ><BsFillTrashFill size="20" /> </button>
                     </td>
                 </tr>
             )
@@ -90,7 +92,7 @@ function Carrito() {
 
     return(
         <div>
-            <Table  striped bordered hover size="sm">
+            <Table className="carrito-table" striped bordered hover size="sm">
                 <thead class="carrito-tabla">
                     <tr >
                         <th>Producto</th>

@@ -11,10 +11,10 @@ function CompraFinalizada() {
     }
     return(
         <div>
-            <Alert variant="success">
+            <Alert className="compra-finalizada-mensaje" variant="success">
                 <p>¡Su compra ha sido exitosa! ¡Recibirá su pedido en 3 días hábiles!</p>
                 <p>¡Muchas Gracias!</p>
-                <button onClick={volverAHome} >ok</button>
+                <button className="carrito-btn" onClick={volverAHome} >ok</button>
             </Alert>
         </div>
     )  
