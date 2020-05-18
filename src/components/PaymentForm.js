@@ -2,6 +2,8 @@ import React from 'react';
 import Cards from 'react-credit-cards';
 
 import { Redirect } from 'react-router-dom'
+
+import firebase from '../Config/firebase';
  
 export default class PaymentForm extends React.Component {
   state = {
@@ -12,6 +14,11 @@ export default class PaymentForm extends React.Component {
     number: '',
     redirect: false
   };
+
+  componentDidMount(){
+    let key = localStorage.getItem('key');
+    console.log(key); 
+  }
 
   handleInputFocus = (e) => {
     this.setState({ focus: e.target.name });
@@ -24,6 +31,22 @@ export default class PaymentForm extends React.Component {
   }
 
   finalizarCompra = (e) => {
+    
+    var hoy = new Date();
+    var fecha = hoy.getDate() + '-' + (hoy.getMonth()+1) + '-' + hoy.getFullYear();
+    var hora = hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds();
+    var fechaYHora= fecha + ' ' + hora;
+  
+    let key = localStorage.getItem('key');
+    let precioTotal=sessionStorage.getItem('precioTotal');
+
+    var pedido= JSON.parse(sessionStorage.getItem('total'));
+
+    firebase.database().ref(`usuarios/${key}/pedidos/${fechaYHora}`).set({
+      pedido: pedido,
+      total: precioTotal
+    })
+    
     sessionStorage.clear();
 
     this.setState({

@@ -46,7 +46,7 @@ function DetalleProducto() {
     function handleChange(e) {
         const cantidad = parseInt(e.target.value)
         setCantidad(parseInt(cantidad))
-        setPedidoHecho({prod:datos.name,precio:datos.price, cantidad:cantidad})
+        setPedidoHecho({prod:datos.name,precio:datos.price, cantidad:cantidad,total:(datos.price*cantidad)})
     }
 
     function agregarAlCarrito() {
@@ -64,7 +64,9 @@ function DetalleProducto() {
             sessionStorage.setItem('total',JSON.stringify(array));
             
             //recargo la pagina para que se actualice el color del carrito
+            history.push("/")
             window.location.reload(true);
+            
         } else{
             alert('debe introducir una cantidad mayor a 0')
         } 

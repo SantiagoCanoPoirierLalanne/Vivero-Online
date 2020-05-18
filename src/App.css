@@ -87,6 +87,10 @@ LOGIN FORM
     text-align: start;
 }
 
+.olvide-password-btn{
+    margin-left: 20px;
+}
+
 /**********
 REGISTRO FORM
 ***********/
@@ -298,4 +302,20 @@ COMPRA FINALIZADA
 
 .compra-finalizada-mensaje{
     text-align: center;
+}
+
+/**************
+PERFIL USUARIO
+***************/
+.perfil-usuario{
+    margin:25px
+}
+
+/******************
+HISTORIAL DE COMPRA
+*******************/
+
+.historial-btn{
+    margin-left:25px;
+    margin-bottom: 20px;
 }

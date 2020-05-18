@@ -60,6 +60,7 @@ function Login () {
                 setmostrarError(false);
                 setDatos({email:"",password:""})
                 localStorage.setItem('usuarioLogeado',JSON.stringify(username))
+                localStorage.setItem('emailLogeado',JSON.stringify(email))
                 
                 /* si hay cosas en el carrito, vas directo a él, sino vas a la home para poder ver los productos */
                 if(sessionStorage.getItem('total')){
@@ -83,7 +84,7 @@ function Login () {
         history.push('/registro')
     }
 
-    /* function cambiarPassword() {
+    function cambiarPassword() {
         var auth = firebase.auth();
         var emailAddress = datos.email;
 
@@ -96,11 +97,12 @@ function Login () {
         // An error happened.
         });
         setDatos({email:"",password:""}) 
-    } */
+    } 
  
     return (
         <Form className="form-login">
-            <h2 className="form-login-title">Iniciar Sesión</h2>
+            <h2 className="form-login-title">Complete sus datos e ingrese a su cuenta</h2>
+            <h5 className="form-login-title">En caso de querer reestablecer la contraseña, complete su email y aprete el boton 'Olvide mi Contraseña'</h5>
             <Form.Group as={Row} controlId="formHorizontalEmail">
                 <Form.Label column sm={12}>
                 Email
@@ -137,6 +139,7 @@ function Login () {
             <Form.Group as={Row}>
                 <Col>
                 <Button onClick={handleSubmit} variant="dark" type="submit">Iniciar Sesión</Button>
+                <Button onClick={cambiarPassword}  variant="dark" type="text" className="olvide-password-btn">Olvide mi Contraseña</Button>
                 </Col>
             </Form.Group>
             <br></br>

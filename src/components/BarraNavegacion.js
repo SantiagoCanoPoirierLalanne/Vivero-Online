@@ -7,6 +7,8 @@ import DetalleProducto from './DetalleProducto';
 import Carrito from './Carrito';
 import Compra from './Compra';
 import CompraFinalizada from './CompraFinalizada';
+import PerfilUsuario from './PerfilUsuario';
+import HistorialDeCompra from './HistorialDeCompra';
 
 
 import firebase from '../Config/firebase';
@@ -30,6 +32,10 @@ function BarraNavegacion() {
         }) 
     }
 
+    function irAPerfil(){
+        history.push("/perfilUsuario")
+    }
+
     return (  
         <div>
             <>
@@ -44,7 +50,7 @@ function BarraNavegacion() {
                             <Button variant="outline-info">Buscar</Button>
                         </Form> */}
                     <div>
-                        {localStorage.getItem('usuarioLogeado') && <div> <a style={{color:"white"}} >Bienvenido {JSON.parse(localStorage.getItem('usuarioLogeado'))} </a> <button className="salir-btn" onClick={cerrarSesion}>Salir</button> </div>} 
+                        {localStorage.getItem('usuarioLogeado') && <div> <a style={{color:"white"}} >¡Bienvenide {JSON.parse(localStorage.getItem('usuarioLogeado'))}! </a> <button className="salir-btn" onClick={irAPerfil}>Mi Perfil</button> <button className="salir-btn" onClick={cerrarSesion}>Salir</button> </div>} 
                     </div>
                  </Navbar>
             </> 
@@ -57,6 +63,9 @@ function BarraNavegacion() {
                 <Route exact path="/carrito"> <Carrito /> </Route>
                 <Route exact path="/compra"> <Compra /> </Route>
                 <Route exact path="/compraFinalizada"> <CompraFinalizada /> </Route>
+                <Route exact path="/perfilUsuario"> <PerfilUsuario /> </Route>
+                <Route exact path="/historial"> <HistorialDeCompra /> </Route>
+                
             </Switch>
                 
         </div>

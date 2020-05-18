@@ -25,7 +25,7 @@ function Carrito() {
                 <tr>
                     <td colSpan="3">TOTAL</td>
                     <td>0</td> 
-                    <th></th>
+                    
                 </tr>
             </tbody>
         </Table>
